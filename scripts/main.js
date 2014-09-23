@@ -42,13 +42,16 @@ function populateQueue() {
               };
               return queueModel;
           });
-          _.each(queueModel, function(queueModel){
-            if (queueModel.who === 'Matt') {
-              renderTemplate('#templates-queue-item', '#matt-queue', queueModel);
-            }
-            else {
-              renderTemplate('#templates-queue-item', '#jake-queue', queueModel);
-            }
+          var sortedQueueModel = _.sortBy(queueModel, function(a) {
+              return a.createdDate;
+          });
+          _.each(sortedQueueModel, function(queueItem){
+                if (queueItem.who === 'Matt') {
+                    renderTemplate('#templates-queue-item', '#matt-queue', queueItem);
+                }
+                else {
+                    renderTemplate('#templates-queue-item', '#jake-queue', queueItem);
+                }
           });
           markCompleted();
       });
@@ -74,3 +77,4 @@ function sendNewQueue(e) {
 
 $('#add').on('click', sendNewQueue);
 populateQueue();
+setInterval(populateQueue, 30000);
