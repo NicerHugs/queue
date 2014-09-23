@@ -4,8 +4,12 @@
 
 // Custom Styles
 
-* {
-  text-align: top;
+header {
+  text-align: center;
+}
+
+main {
+  overflow: auto;
 }
 
 .queue {
@@ -16,7 +20,12 @@
   padding: 10px;
 }
 
+.jake {
+  float: right;
+}
+
 
 footer {
   margin-top: 50px;
+  text-align: center;
 }
