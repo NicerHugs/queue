@@ -40,7 +40,7 @@
         <option>Matt</option>
         <option>Jake</option>
       </select>
-      <a href="#" id="add">add yo'self to the queue</a>
+      <div><a href="#" id="add">add yo'self to the queue</a></div>
     </form>
 
   </main>
@@ -52,8 +52,10 @@
     <script type="text/template" id="templates-queue-item">
       <li id="<%= id %>">
         <input class="completed-checkbox" type="checkbox" />
-        <span>name: <%= name %></span>
-        <span>time submitted: <%= when %></span>
+        <div class="queue-info">
+          <span>Name: <%= name %></span>
+          <span>Added: <%= when %></span>
+        </div>
       </li>
     </script>
 
