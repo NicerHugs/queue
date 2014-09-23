@@ -32,19 +32,23 @@
   <main>
     <div class="matt queue">
       <h2>Matt's queue</h2>
+      <ul id="matt-queue">
+      </ul>
     </div>
 
     <div class="jake queue">
       <h2>Jake's queue</h2>
+      <ul id="jake-queue">
+      </ul>
     </div>
 
     <form>
-      <input type="text" placeholder="yo' name">
+      <input type="text" placeholder="yo' name" id="name">
       <select id="who">
         <option>Matt</option>
         <option>Jake</option>
       </select>
-      <a href="#">add yo'self to the queue</a>
+      <a href="#" id="add">add yo'self to the queue</a>
     </form>
 
   </main>
@@ -52,6 +56,14 @@
   <footer>
     please improve me and make a pull request
   </footer>
+
+    <script type="text/template" id="templates-queue-item">
+      <li id="<%= id %>">
+        <input class="completed-checkbox" type="checkbox" />
+        <span>name: <%= name %></span>
+        <span>time submitted: <%= createdDate %></span>
+      </li>
+    </script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

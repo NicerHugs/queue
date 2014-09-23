@@ -4,6 +4,10 @@
 
 // Custom Styles
 
+* {
+  text-align: top;
+}
+
 .queue {
   box-sizing: border-box;
   width: 49%;
@@ -11,6 +15,7 @@
   overflow: auto;
   padding: 10px;
 }
+
 
 footer {
   margin-top: 50px;
