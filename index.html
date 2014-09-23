@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>queue</title>
+
+    <link rel="icon" href="favicon.ico?v1" type="image/ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+
+  <header>
+    <h1>queue</h1>
+  </header>
+
+  <main>
+    <div class="matt queue">
+      <h2>Matt's queue</h2>
+      <ul id="matt-queue">
+      </ul>
+    </div>
+
+    <div class="jake queue">
+      <h2>Jake's queue</h2>
+      <ul id="jake-queue">
+      </ul>
+    </div>
+
+    <form>
+      <input type="text" placeholder="yo' name" id="name">
+      <select id="who">
+        <option>Matt</option>
+        <option>Jake</option>
+      </select>
+      <a href="#" id="add">add yo'self to the queue</a>
+    </form>
+
+  </main>
+
+  <footer>
+    please improve me and make a pull request
+  </footer>
+
+    <script type="text/template" id="templates-queue-item">
+      <li id="<%= id %>">
+        <input class="completed-checkbox" type="checkbox" />
+        <span>name: <%= name %></span>
+        <span>time submitted: <%= createdDate %></span>
+      </li>
+    </script>
+
+    <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/main.js"></script>
+</body>
+</html>
