@@ -38,7 +38,8 @@ function populateQueue() {
                   id: queueDatum._id,
                   name: queueDatum.name,
                   createdDate: queueDatum.createdDate,
-                  who: queueDatum.withWho
+                  who: queueDatum.withWho,
+                  when: Math.floor((Date.now() - queueDatum.createdDate)/60000) + " minutes ago"
               };
               return queueModel;
           });

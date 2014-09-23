@@ -9,21 +9,71 @@ header {
 }
 
 main {
+  margin: 0 auto;
+  max-width: 1000px;
   overflow: auto;
+  width: 80%
 }
 
 .queue {
+  border: solid 1px;
+  border-radius: 5px;
   box-sizing: border-box;
   width: 49%;
   display: inline-block;
   overflow: auto;
   padding: 10px;
+
+  h2 {
+    border-bottom: solid 1px;
+  }
+
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+    padding: 10px;
+  }
+}
+
+.completed-checkbox {
+  margin-top: 9px;
+  float: left;
+}
+
+.queue-info {
+  margin-left: 20px;
+
+  span {
+    display: block;
+  }
 }
 
 .jake {
   float: right;
 }
 
+form {
+  padding-top: 20px;
+  width: 100%;
+  clear: both;
+  text-align: center;
+
+  a {
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    padding: .5em 1em;
+    background: #c4c4c4;
+    line-height: 2em;
+    margin: 5px;
+    text-decoration: none;
+  }
+}
 
 footer {
   margin-top: 50px;
