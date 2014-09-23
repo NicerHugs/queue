@@ -77,3 +77,4 @@ function sendNewQueue(e) {
 
 $('#add').on('click', sendNewQueue);
 populateQueue();
+setInterval(populateQueue, 30000);
